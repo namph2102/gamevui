@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/grid.css">
+    <link rel="stylesheet" href="login.css">
+    <meta name="description" content="Game Free -Tài xỉu là bộ môn game may mắn, kiểm tra xem tỉ số may mắn của bạn là bao nhiêu, chúc bạn thành công ">
+    <title>LOGIN-TÀI XỈU online</title>
+</head>
+
+<body>
+    <audio class="hide" preload="500" id="playblackground" autoplay loop  src="/img/music/musicbg.mp3"></audio>
+    <audio id="audio" src="/img/music/mouse.mp3"></audio>
+    <div class="container">
+        <div class="grid wide">
+            <div class="login_content">
+                <div class="logo_login l-2 m-4 c-4 l-o-5 m-o-4 c-o-4">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <form class="form_login l-6 m-8 c-12 l-o-3 m-o-2" action="./src/trangchu.html">
+                    <div class="img_login"><img class="dangky" src="img/dangky.png" alt=""><img class="dangnhap" src="img/dangnhap.png" alt=""></div>
+                    <div class="form_login_content">
+                        <div class="form-group">
+                            <i class="fa-solid fa-user"></i><input placeholder="Tên đăng nhập" type="text" name="username" id="username"
+                                class="username"><i></i>
+                        </div><span class="form_error"></span>
+                        <div class="form-group">
+                            <i class="fa-solid fa-key"></i><input placeholder="Nhập mật khẩu"  type="password" name="password" id="password"
+                                class="password"><i class="fa-solid fa-eye"></i>
+                        </div><span class="form_error"></span>
+                        <div class="form-group login_rpassword">
+                            <i class="fa-solid fa-key"></i><input placeholder="Nhập lại mật khẩu"  type="password" name="rpassword" id="rpassword"
+                                class="rpassword"><i class="fa-solid fa-eye"></i>
+                        </div><span class="form_error3 form_error"></span>
+                      
+                    </div>
+                    <button type="submit"></button>
+                </form>
+            
+            </div>
+        </div>
+        
+    </div>
+    <div class="container_footer"> 
+        <a href="">  <img src="img/iconphone.png" alt=""></a>
+        <a href=""><img src="img/iconchating.png" alt=""></a>
+    </div>
+    <div class="person1" >
+        <img src="img/girlpoker1.png" alt="">
+    </div>
+    <div class="person2" >
+        <img src="img/girlpoker2.png" alt="">
+    </div>
+</body>
+<script src="src/validate.js"></script>
+</html>

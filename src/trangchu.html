@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Free -Tài xỉu là bộ môn game may mắn, kiểm tra xem tỉ số may mắn của bạn là bao nhiêu, chúc bạn thành công ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Tài xỉu | Game Free | Bán nhà</title>
+</head>
+<style>
+    .loading {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    .loading .img_preloading_full {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+    }
+    .content_login img{
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        z-index: 4;
+        width: 20%;
+        height: 30%;
+        animation: scaleIcon 0.8s ease infinite;
+    }
+    .loading h2{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        z-index: 4;
+        animation: chagnecolro 0.9s ease infinite;
+    }
+    @keyframes chagnecolro {
+        0%{
+            color: rgb(236, 158, 12);
+        }
+        50%{
+            color: rgb(17, 249, 172);
+        }
+        100%{
+            color: rgb(50, 23, 203);
+        }
+    }
+</style>
+
+<body class="preloading">
+    <div class="loading" id="loading">
+        <div class="content_login">
+            <img src="/img/music/logoloadvip.png" alt="">
+        </div>
+        <h2>Design by Nam Hoài</h2>
+       <img  class="img_preloading_full" src="/img/music/loadingvip.gif" alt="">
+    </div>
+    <audio id="audio" src="/img/music/mouse.mp3"></audio>
+    <img style="display: none;" src="https://viettingame.com/wp-content/uploads/2021/05/jxhjrhllp_gvqofilhixgyj-w2cifcbymay6scjx2psdfqltnsgblld1nbkh8wunjlx_s512-rw.webp" alt="">
+    <div class="container">
+        <header class="content">
+            <div class="grid wide row ">
+                <div class="container_header row l-4 m-4 c-3">
+                    <!-- <div class="l-2 m-0 c-0"><img class="logo" src="/img/logo.png" alt=""></div> -->
+                    <div class="header_imfomation l-3 m-4 c-4">
+                        <img class="avatar" src="/img/avata/avata1.jpeg" alt="">
+                        <img class="logo_vip" src="/img/xucxac/vip1.png" alt="">
+                    </div>
+                    <div class="header_username l-7 m-7 c-8">
+                        <h3 class="header_username_login">hoainam</h3>
+                    </div>
+                </div>
+
+                <div class="container_body l-4 m-8 c-9">
+                    <input disabled type="text" name="total_coin" class="total_coin" value="0">
+                </div>
+                <div class="container_footer l-4 m-0 c-0">
+
+                </div>
+
+            </div>
+        </header>
+        <div class="grid wide l-12 m-12 c-12">
+            <marquee class="body_notifi" scrollamount="10">
+                <h4>Chúc mừng người chơi <span class="goodperson">Trùm tài xỉu [MaxVip]</span> thắng lớn <span
+                        class="money_lucky">19,546,254</span> </h4>
+
+            </marquee>
+        </div>
+        <article>
+            <div class="grid wide row boxs_gameAll">
+                <div class="box__game open_taixiu l-2 m-2 c-3">
+                    <img class="box_taixiu " src="" alt=""/>
+                    <img class="box_pretaixiu" src="/img/pre_icon/icon_taixiu.png" alt=""/>
+                </div>
+
+                <div class="box__game box__game2 l-2 m-2 c-3">
+                    <img class="box_taixiu" src="" alt="">
+                    <img class="box_pretaixiu" src="/img/pre_icon/icon_baucua.png" alt="">
+                </div>
+
+                <div class="box__game box__game3 l-2 m-2 c-3">
+                    <img class="box_taixiu" src="" alt="">
+                    <img class="box_pretaixiu" src="/img/pre_icon/icon_bacao.png" alt="">
+                </div>
+
+                <div class="box__game box__game4 l-2 m-2 c-0">
+                    <img class="box_taixiu" src="" alt="">
+                    <img class="box_pretaixiu" src="/img/pre_icon/icon_traicay.png" alt="">
+                </div>
+            </div>
+        </article>
+        <aside class="game hide">
+            <div class="grid wide">
+
+                <div class="game_ifm l-6 m-8 c-12 l-o-3 m-o-2 c-o-3">
+
+                </div>
+                <div class="row game_taixiu_container">
+                    <div class="game_content l-8 m-12 c-12">
+                        <div class="game_content_close">
+                            <img src="/img/pre_icon/clossing.png" alt="">
+                        </div>
+                        <div class="game_content_chat">
+                            <img style="border-radius: 15%;" src="/img/modal/speak.png" alt="">
+                        </div>
+                        <div class="game_content_lichsu">
+                            <img src="/img/pre_icon/icon_lichsu.png" alt="">
+                        </div>
+                        <div class="game_content_top">
+                            <img src="/img/pre_icon/icon_top.png" alt="">
+                        </div>
+                        <div class="sub_time hide">
+
+                        </div>
+                        <div class="box_dices">
+                            <div class="time_main ">
+
+                            </div>
+                            <div class="box_taixiu_dices hide">
+                                <div class="boxdice"><img src="/img/xucxac/6.png" alt=""></div>
+                                <div class="box_dices_ep row">
+                                    <div class="boxdice"><img src="/img/xucxac/4.png" alt=""></div>
+                                    <div class="boxdice"><img src="/img/xucxac/1.png" alt=""></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="phientaixiu"> #<span class="phien">134256685</span></div>
+                        <img class="img__taixiu img__tai" src="/img/xucxac/tai.png" alt="">
+                        <img class="img__taixiu img__xiu" src="/img/xucxac/xiu.png" alt="">
+                        <div class="total_tai ">0</div>
+                        <div class="total_xiu ">0</div>
+                        <div type="text" class="value_tai input_value_taixiu">Đặt Cược</div>
+                        <div type="text" class="value_xiu input_value_taixiu">Đặt Cược</div>
+                        <div class="player_tai">0</div>
+                        <div class="player_xiu">0</div>
+                        <div class="list_history_box">
+                            <div class="result_box active"></div>
+                            <div class="result_box active"></div>
+                            <div class="result_box "></div>
+                            <div class="result_box active"></div>
+                            <div class="result_box active"></div>
+                            <div class="result_box"></div>
+                            <div class="result_box active"></div>
+                            <div class="result_box"></div>
+                            <div class="result_box"></div>
+                            <div class="result_box "></div>
+                            <div class="result_box active"></div>
+                            <div class="result_box active"></div>
+                        </div>
+                        <div class="list_price">
+                            <div class="box_price">1K</div>
+                            <div class="box_price">10K</div>
+                            <div class="box_price">50K</div>
+                            <div class="box_price">100K</div>
+                            <div class="box_price">500K</div>
+                            <div class="box_price">1M</div>
+                            <div class="box_price">2M</div>
+                            <div class="box_price">10M</div>
+                        </div>
+                        <div class="put_money">
+                            <button class="put_allmoney">TẤT TAY</button>
+                            <button class="put_gamble">ĐẶT CƯỢC</button>
+                            <button class="put_canel">HỦY</button>
+                        </div>
+                        <div class="add_moneys">
+                            
+                        </div>
+                        <div class="modal_overlayer hide">
+                            <div class="grid wide">
+                                <div class="modal_noclick"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_chat l-4 m-0 c-0">
+                        <div class="chat_content">
+                            <div class="chat">
+                                <h5><span class="username">admin</span><span class="username_content">Nhớ bấm nút đặt
+                                        cược mới tính nha! </span></h5>
+                                <h5><span class="username">admin</span><span class="username_content">Game làm vui thôi
+                                        nha :) </span>
+                                </h5>
+                                <h5><span class="username">hieuprono1</span><span class="username_content">Game win dễ
+                                        lắm tùy nhân phẩm thôi kaka</span>
+                                </h5>
+                                <h5><span class="username">Trùm Tài Xỉu [Vip9]</span><span class="username_content">Đánh
+                                        vài cái cũng lên 50 M </span>
+                                </h5>
+                                <h5><span class="username">namne</span><span class="username_content">Xin vía với</span>
+                                </h5>
+
+                                <h5><span class="username">minhoha</span><span class="username_content">Game giải trí
+                                        thôi chứ k rút tiền được </span>
+                                </h5>
+                                <h5><span class="username">namne</span><span class="username_content">Xin vía với</span>
+                                </h5>
+
+                                <h5><span class="username">minhoha</span><span class="username_content">Game giải trí
+                                        thôi chứ k rút tiền được </span>
+                                </h5>
+                                <h5><span class="username">namne</span><span class="username_content">Xin vía với</span>
+                                </h5>
+
+                                <h5><span class="username">minhoha</span><span class="username_content">Game giải trí
+                                        thôi chứ k rút tiền được </span>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <input type="text" name="chat" placeholder="Nhập nội dung chat" id="">
+                        <div class="chat_content_chat">
+                            <img src="/img/pre_icon/clossing.png" alt="">
+                        </div>
+                    </div>
+                </div>
+               
+             
+            </div>
+
+        </aside>
+
+
+        <div class="game__notice_home">
+            <div class="grid wide">
+                Chức năng đang quá trình hoàn thiện
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="grid wide l-12 m-12 c-12">
+                <div class="footer_content">
+                    <img src="/img/xucxac/gif_ruttien.gif" alt="">
+                </div>
+                <div class="footer_btns row ">
+                    <div class="footer_btn">
+                        <button class="event_btn"><i class="fa-solid fa-ice-cream"></i>Sự kiện</button>
+                        <button class="rule_btn"><i class="fa-solid fa-book"></i>Luật chơi</button>
+                    </div>
+                    <div class="footer_btn_emty"></div>
+                    <div class="footer_btn">
+                        <button class="holine_btn"><i class="fa-solid fa-phone"></i>Hotline</button>
+                        <button class="livechat_btn"><i class="fa-brands fa-rocketchat"></i>LiveChat</button>
+                    </div>
+                </div>
+                <div class="h1_footer l-12 m-10 c-8"><a href="#">RÚT TIỀN</a></div>
+            </div>
+        </footer>
+
+
+        <!-- !--Modal nạp tiền cho game-->
+        <div class="modal hide">
+            <div class="modal-content">
+                <div class="name-bank">
+                    <ul>
+                        <li><a href="#">NGÂN HÀNG</a> </li>
+                        <li><a href="#">THẺ CÀO</a></li>
+                        <li><a href="#">VÍ ĐIỆN TỬ</a></li>
+                        <li><a href="#">GIFTCODE</a></li>
+
+                    </ul>
+                    <div id="close_naptien" class="close-modal">
+                        <img src="/img/pre_icon/clossing.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-content-container">
+                    <div class="modal-content_left-head">
+
+                        <table style="text-align: left;">
+                            <tr>
+                                <th>Ngân hàng:</th>
+                                <td>
+                                    <label for="">
+                                        <select name="" id="">
+                                            <option value="Vietcombank">Vietcombank</option>
+                                            <option value="TMCP">TMCP</option>
+                                            <option value=" Agribank"> Agribank</option>
+                                            <option value="Sacombank">Sacombank</option>
+
+                                        </select>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Số tài khoảng: </th>
+                                <td>0877669990</td>
+                            </tr>
+                            <tr>
+                                <th> Tên tài khoảng: </th>
+                                <td>Phạm Hoài Nam</td>
+                            </tr>
+                            <tr>
+                                <th>Chi nhánh: </th>
+                                <td>Lâm Đồng</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-content_right-head">
+                        <table style="text-align: left;">
+                            <tr>
+                                <th>Phương thức:</th>
+                                <td>
+                                    <label for="">
+                                        <select name="" id="">
+                                            <option value="Internet Banking">Internet Banking</option>
+
+
+                                        </select>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Số tiền: </th>
+                                <td><input id="giatrinap" type="number" min="1000000" max="100000000" step="1000000"
+                                        value="0"></td>
+                            </tr>
+                            <div id="modal-hiennaptien">
+
+                            </div>
+                            <tr>
+                                <th>Người Gửi: </th>
+                                <td><input type="text" class="name_naptien" value="Nguyễn Kim"></td>
+                            </tr>
+                            <tr>
+                                <th>Cú pháp:</th>
+                                <td><input type="text" value="ID:21022002"></td>
+                            </tr>
+
+                        </table>
+                        <button>Nạp Tiền</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class=" box_foot">
+                <div class="capcha">
+                    <h2 class="code_capcha">7xj4hw</h2>
+                </div>
+                <i class="fa-solid fa-repeat"></i>
+                <input type="text" class="l-2 m-3 c-4" placeholder="Mã bảo vệ" name="capcha" id="">
+                <div class="capcha_erro"></div>
+            </div>
+            <!-- End Modal nạp tiền cho game-->
+
+        </div>
+
+        <div class="history hide">
+            <div class="history_cuoc">
+                    <img  class="close_history" src="/img/pre_icon/clossing.png" alt="">
+                    <div class="history_cuoc_btn">
+                        <div class="history_cuoc_btn_left"></div>
+                        <div class="history_number_table">1</div>
+                        <div class="history_cuoc_btn_right"></div>
+                    </div>
+                    <table class="table_list_cuoc">
+                      
+                        <!-- <tr>
+                            <td class="table_list_cuoc_phien">#1111</td>
+                            <td class="table_list_cuoc_time">7:15:02 10/08/2002</td>
+                            <td class="table_list_cuoc_red">Cửa đặt</td>
+                            <td class="table_list_cuoc_red">(0-0-0) <br> <span class="table_list_cuoc_ketqua">Tài</span></div></td>
+                            <td class="table_list_cuoc_red">Đặt cược</td>
+                            <td >1.500.000</td>
+                            <td class="table_list_cuoc_red">150.000</td>
+                        </tr> -->
+                    
+                       
+                      
+                    </table>
+            </div>
+        </div>
+</body>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+    $(window).on('load',function(event){
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    }
+    );
+</script> 
+
+<script src="./controller.js"></script>
+
+</html>

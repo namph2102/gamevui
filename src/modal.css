@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Concert+One&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;300;400;500;600;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Patua+One&family=Press+Start+2P&family=Roboto:wght@100;300;400;500;700;900&family=Signika+Negative:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@200;300;400;900&family=Special+Elite&family=Work+Sans:wght@100;200;300;400;500&display=swap');
+
+* {
+    /* border: 1px solid black; */
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --textW: rgba(255, 255, 255, 0.95);
+    --textB: rgba(0, 0, 0, 0.87);
+    --brnen: #FFD57C;
+
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patua One', cursive;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 3;
+}
+
+.modal-content {
+    position: absolute;
+    width: 70%;
+    height: 80vh;
+    top: 10vh;
+    left: 15%;
+    background-image: linear-gradient(180deg, #7C4B16, #1F052B);
+    border: 3px solid #C6953D;
+    border-radius: 6%;
+}
+
+.modal-content .name-bank {
+    margin: auto;
+    font-weight: 400;
+    background-color: #311417;
+    width: 95%;
+    height: 52px;
+    border-left: 3px solid #C6953D;
+    position: relative;
+}
+
+.name-bank .close-modal {
+    position: absolute;
+    top: -6px;
+    right: -15px;
+}
+
+.close-modal img {
+    border-radius: 100%;
+    width: 60px;
+    cursor: pointer;
+}
+
+.modal-content .name-bank ul {
+    border-radius: 21%;
+    width: 102%;
+    background-image: linear-gradient(180deg, #7C4B16, #1F052B);
+
+}
+
+.modal-content .name-bank li {
+    font-family: fangsong;
+    display: inline-block;
+    background-color: #1B0711;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 115px;
+}
+
+.modal-content .name-bank li:first-child {
+    background-image: linear-gradient(121deg, black, #D60708);
+}
+
+.modal-content .name-bank li:hover {
+    background-color: #321C31;
+    color: wheat;
+}
+
+.modal-content .name-bank li a {
+    text-decoration: none;
+    color: #fbc551;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.modal .modal-content-container {
+    width: 100%;
+    background-image: linear-gradient(180deg, #7C4B16, #1F052B);
+    height: 332px;
+    display: flex;
+}
+
+.modal-content_left-head {
+    width: 49%;
+    background-color: #2B1C24;
+
+}
+
+.modal-content_right-head table,
+.modal-content_left-head table {
+    margin-left: 10%;
+    width: 90%;
+    font-size: 15px;
+    margin-top: 10%;
+    border: none;
+}
+
+.modal-content_right-head table th,
+.modal-content_left-head table th {
+    border: none;
+    width: 30%;
+    background-color: transparent;
+    color: #C3963B;
+    font-size: 19px;
+
+}
+
+.modal-content_right-head table tr,
+.modal-content_left-head table tr {
+    height: 64px;
+}
+
+.modal-content_right-head table td,
+.modal-content_left-head table td {
+    margin-left: 20%;
+    border: none;
+    margin-left: 20px;
+    color: white;
+    height: 34px;
+    line-height: 34px;
+    width: 46%;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.modal-content_right-head table td select,
+.modal-content_left-head table td select {
+    font-size: 15px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #1B001E;
+    color: white;
+    border: 2px solid #C6953D;
+    border-radius: 15px;
+
+}
+
+.modal-content_right-head table td select {
+    font-size: 18px;
+    width: 80%;
+    padding: 5px 0;
+    background-color: #1B001E;
+    color: white;
+    border: 2px solid #C6953D;
+    border-radius: 15px;
+}
+
+.modal-content_right-head table tr td input {
+    font-size: 18px;
+    width: 80%;
+    padding: 5px 0;
+    background-color: #240f1a;
+    color: white;
+    border: 2px solid #C6953D;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-content_right-head table {
+    margin-right: 10px;
+
+}
+
+.modal-content_right-head {
+    margin-left: 3%;
+    width: 48%;
+    border-radius: 7px;
+    background-color: #2B1C24;
+    position: relative;
+}
+
+#modal-hiennaptien {
+    line-height: 25px;
+
+    text-align: center;
+    position: absolute;
+    font-size: 22px;
+    color: red;
+    bottom: 42%;
+    right: 20%;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.modal-content_right-head button {
+    position: absolute;
+    bottom: -40%;
+    left: -21%;
+    padding: 12px 30px;
+    background-image: linear-gradient(183deg, black, #68470A);
+    color: #FFFFD0;
+    font-size: 18px;
+    border-radius: 19px;
+    border: 2px solid #B29B4E;
+}
+
+.modal-content_right-head button:hover {
+    background-image: linear-gradient(0deg, rgb(240, 135, 135), #701818);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modal-history {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8;
+
+
+}
+
+#modal-history .modal-history-content {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    width: 80%;
+    height: 600px;
+    color: white;
+}
+
+#modal-history .history-head {
+    background-image: linear-gradient(180deg, #ffd400, #4D2736);
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal-history .history-head .head-beau {
+    font-size: 25px;
+    background-image: linear-gradient(180deg, #20425a, #dfd92200);
+    text-align: center;
+    width: 250px;
+    background: blue;
+    border-radius: 0 259px;
+    line-height: 50px;
+    background: linear-gradient(45deg, #5e5e4f, #4544a7);
+}
+
+#modal-history .history-content i {
+    font-size: 20px;
+    line-height: 50px;
+    background-color: #5e5b15;
+    padding: 0 20px 0 30px;
+    border-radius: 0px 11px 7px 37px;
+}
+
+#modal-history .history-content i:hover {
+    background-color: rgb(203, 33, 33);
+    cursor: pointer;
+}
+
+#modal-history tr {
+    border: 2px solid darkcyan;
+    background-color: #201013;
+}
+
+#modal-history tr th {
+    background: linear-gradient(179deg, red, #513041);
+    color: yellow;
+    font-weight: 600;
+    border: none;
+}
+
+#modal-history table tr td {
+    padding: 5px 0;
+}
+
+#openhistory {
+    position: absolute;
+    top: 52%;
+    left: 2.8%;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(180deg, #ffd400, #4D2736);
+    width: 56px;
+    height: 25px;
+}
+
+#openhistory:hover {
+    background-image: linear-gradient(180deg, #dfdccc, #802d4f);
+    color: yellow;
+}
+
+.box_foot {
+    margin: 16px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15%;
+    text-align: center;
+    width: 100%;
+
+}
+
+.capcha {
+    width: 140px;
+    border-radius: 18px;
+    box-shadow: 4px 5px 6px rgb(221, 69, 69);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Special Elite', cursive;
+    background-image: url(https://media1.giphy.com/media/83d1XZ0PYMbhFDBFZc/200w.webp?cid=ecf05e47p9k76muitf03czjxxigbhzzidmhmhe7ghornxob4&rid=200w.webp&ct=g);
+}
+
+.code_capcha {
+    font-size: 19px;
+}
+
+.box_foot i {
+    color: white;
+    margin: 0 14px;
+    font-size: 14px;
+}
+
+.box_foot input {
+    font-size: 18px;
+    width: 400px;
+    padding: 5px 0;
+    background-color: #240f1a;
+    color: white;
+    border: 2px solid #C6953D;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.capcha_erro {
+    color: red;
+    margin: 4px 0;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+/* History lịch sử cược */
+.history {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+
+    z-index: 3;
+}
+
+.history_cuoc_btn {
+    display: flex;
+    position: absolute;
+    top: 3.2%;
+    left: 2.5%;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_cuoc_btn_left,
+.history_cuoc_btn_right {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.history_number_table {
+    background-image: linear-gradient(to bottom, #2A1419, #1B0E11);
+    width: 40px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.history_cuoc {
+    width: 80%;
+    background-image: url(/img/modal/historycuoc.png);
+    height: 80vh;
+    background-size: 100% 100%;
+    border-radius: 50px;
+    margin: auto;
+    position: relative;
+}
+
+.history_cuoc img {
+    position: absolute;
+    right: 2%;
+    border-radius: 15%;
+    top: 0;
+    cursor: pointer;
+
+}
+
+.table_list_cuoc {
+    position: relative;
+    top: 22%;
+    width: 95%;
+    left: 2%;
+    color: var(--white);
+
+}
+
+.table_list_cuoc tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4px 0;
+
+
+}
+
+.table_list_cuoc tr td {
+    width: 12%;
+
+}
+
+.table_list_cuoc .table_list_cuoc_phien {
+    width: 12%;
+    text-align: center;
+}
+
+.table_list_cuoc .table_list_cuoc_time {
+    width: 16%;
+    text-align: center;
+}
+
+.table_list_cuoc_ketqua {
+    margin-left: 10%;
+}
+
+.table_list_cuoc_red {
+    color: var(--brnen);
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+     .history_cuoc {
+        width: 100%;
+    }
+
+     .history_cuoc_btn_left,
+     .history_cuoc_btn_right {
+        width: 60px;
+        height: 60px;
+
+    }
+   
+     .game_ifm {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+     .game_content .img__tai {
+        top: 25%;
+        left: 9%;
+        width: 100px;
+    }
+
+     .game_content .img__xiu {
+        top: 25%;
+        right: 9%;
+        width: 100px;
+    }
+
+     .game_content .total_tai {
+        left: 2%;
+    }
+
+     .game_content .total_xiu {
+        right: 2%;
+    }
+
+     .list_history_box {
+        left: 20%;
+        width: 60%;
+        padding: 0 12px;
+
+    }
+
+     .result_box {
+        width: 15px;
+        height: 15px;
+    }
+
+     .list_price {
+        left: 5%;
+        width: 90%;
+        font-size: 16px;
+    }
+
+     .list_price .box_price {
+        font-size: 18px;
+    }
+
+     .put_money .put_allmoney {
+        font-size: 15px;
+    }
+
+     .box_dices .time_main {
+        font-size: 30px;
+    }
+
+     .boxdice img {
+        width: 50px;
+    }
+
+     .game_content_close img {
+        width: 50px;
+    }
+
+     .game_content_top img {
+        width: 50px;
+    }
+
+     .game_content_lichsu img {
+        width: 50px;
+    }
+
+     .game_content_chat img {
+        border-radius: 50px;
+        width: 50px;
+    }
+
+     .container_body input {
+        font-size: 22px;
+    }
+
+
+     .game_content .input_value_taixiu {
+        font-size: 14px;
+    }
+
+     .header_imfomation .logo_vip {
+        top: 58%;
+        right: -175%;
+        width: 32px;
+    }
+
+     .body_notifi {
+        height: 45px;
+        font-size: 14px;
+    }
+
+     .footer_btns {
+        width: 93%;
+        left: 4%;
+    }
+
+     .footer_btns button {
+        font-size: 10px;
+
+    }
+
+     .footer_btns button i {
+        display: none;
+    }
+
+     footer .h1_footer {
+        font-size: 38px;
+    }
+
+     .box_taixiu_dices .boxdice img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+     .add_moneys {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+     .phientaixiu .phien {
+        font-size: 16px;
+    }
+
+     .modal-content_left-head {
+        display: none;
+    }
+
+     .modal-content {
+        width: 100%;
+        left: 0;
+    }
+
+     .modal-content_right-head {
+        width: 100%;
+    }
+
+     .box_foot {
+        bottom: 26%;
+        left: 10%;
+    }
+
+     .box_foot input {
+        flex: 0 0 66.66%;
+        max-width: 66.66%;
+    }
+
+     .code_capcha {
+        font-size: 16px;
+        padding: 0 25px;
+    }
+
+     .modal-content_right-head button {
+        width: 100%;
+        left: 0;
+        bottom: -39%;
+    }
+
+     #modal-hiennaptien {
+        bottom: 46%;
+        right: 17%;
+    }
+
+     .close-modal img {
+        width: 50px;
+    }
+
+     .game__notice_home {
+        width: 100%;
+        left: 0;
+        text-align: center;
+        transform: translateY(-45px);
+        transition: 0.2s linear
+    }
+
+     .game__notice_home.active {
+        transform: translateY(100px);
+        font-size: 20px;
+    }
+
+     .modal-content_right-head table tr td input,
+    .modal-content_right-head table td select {
+        width: 95%;
+    }
+
+     .modal-content_right-head {
+        margin-left: 0%;
+    }
+
+     .modal-content {
+        top: 4vh;
+    }
+    .footer_content {
+        margin-top: 15%;
+    }
+}
